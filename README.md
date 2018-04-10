@@ -2,12 +2,12 @@
 
 Wave 1 Wave 2 Process:
 
--Field wave 1 survey
--Field wave 2 survey
--Produce two datasets -- need to clean them a bit before submitting
--Read in both datasets
--Merge both datasets
--Requires respondent Turk IDs
+Field wave 1 survey
+Field wave 2 survey
+Produce two datasets -- need to clean them a bit before submitting
+Read in both datasets
+Merge both datasets
+Requires respondent Turk IDs
 
 Function Tasks:
 -Check duplicates
