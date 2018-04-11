@@ -68,7 +68,7 @@ t_out <- function(test) {
 t_generalize <- function(w1, w2, cnames1, cnames2) {
   # Arguments #  
   # w1 = wave1 dataset
-  # w2 = wave2 dataset
+  # w2 = wave2 dataset, which is w1 and w2 merged, actually.
   # cnames1; cnames2 = character vector of column names; must be same name
   
   # Error Handling #
