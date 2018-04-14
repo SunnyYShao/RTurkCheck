@@ -107,7 +107,6 @@ t_generalize <- function(w1, w2, cnames1, cnames2) {
   
 }
 
-
 ###################################
 # Variable Descriptive Statistics #
 ###################################
@@ -123,6 +122,7 @@ sum_func <- function(dat){
   colnames(out) <- c("Minimum", "Maximum", "Mean","Median", "Std.Dev")
   return(out)
 }
+
 
 ########################################################
 # aov_treat_compare: Check Across Treatment Conditions #
@@ -148,9 +148,18 @@ aov_treat_compare <- function (dat, var_names, treat_var){
   return (aov_mat)
 }
 
-sarah <- function(dat){
-  mean_var <- mean(dat$var)
-  return(mean_var)
-}
-# i added this line from github
-# i added this line from rstudio
+
+### Sarah's Snowy Saturday Night ###
+
+wave1 <- read.csv("w1.csv", header = TRUE)
+wave2 <- read.csv("w2.csv", header = TRUE)
+
+colnames(wave1)
+colnames(wave2)
+
+colnames1 <- colnames2 <- c("religion_r", "dem", "income_r")
+
+t_gen_out <- t_generalize(wave1, wave2, colnames1, colnames2)
+sum_func_out_w1 <- sum_func(wave1)
+sum_func_out_w2 <- sum_func(wave1)
+
