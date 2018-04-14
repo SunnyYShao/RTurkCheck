@@ -147,3 +147,8 @@ aov_treat_compare <- function (dat, var_names, treat_var){
   aov_mat <- round(aov_mat, 4)
   return (aov_mat)
 }
+
+sarah <- function(dat){
+  mean_var <- mean(dat$var)
+  return(mean_var)
+}
