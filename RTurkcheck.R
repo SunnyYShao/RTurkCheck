@@ -152,3 +152,4 @@ sarah <- function(dat){
   mean_var <- mean(dat$var)
   return(mean_var)
 }
+# i added this line from github
