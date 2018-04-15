@@ -107,7 +107,6 @@ t_generalize <- function(w1, w2, cnames1, cnames2) {
   
 }
 
-
 ###################################
 # Variable Descriptive Statistics #
 ###################################
@@ -123,6 +122,7 @@ sum_func <- function(dat){
   colnames(out) <- c("Minimum", "Maximum", "Mean","Median", "Std.Dev")
   return(out)
 }
+
 
 ########################################################
 # aov_treat_compare: Check Across Treatment Conditions #
@@ -147,3 +147,33 @@ aov_treat_compare <- function (dat, var_names, treat_var){
   aov_mat <- round(aov_mat, 4)
   return (aov_mat)
 }
+
+
+### Sarah's Snowy Saturday Night ###
+
+# read in datasets
+wave1 <- read.csv("w1.csv", header = TRUE)
+wave2 <- read.csv("w2.csv", header = TRUE)
+
+# create wave dummies (2 different ways)
+wave1$wave <- rep(1, dim(wave1)[1])
+wave2$wave <- 2
+
+# look at variable names
+colnames(wave1)
+colnames(wave2)
+
+# pull variables to compare
+colnames1 <- colnames2 <- c("religion_r", "dem", "income_r")
+
+# run t-tests on these three variables
+t_gen_out <- t_generalize(wave1, wave2, colnames1, colnames2)
+library(xtable)
+xtable(t_gen_out)
+
+sum_func_out_w1 <- sum_func(wave1)
+sum_func_out_w2 <- sum_func(wave1)
+
+# can't do much else without the respondent variable names or treatment/control info
+
+
