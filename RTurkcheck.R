@@ -155,10 +155,6 @@ aov_treat_compare <- function (dat, var_names, treat_var){
 wave1 <- read.csv("w1.csv", header = TRUE)
 wave2 <- read.csv("w2.csv", header = TRUE)
 
-# create wave dummies (2 different ways)
-wave1$wave <- rep(1, dim(wave1)[1])
-wave2$wave <- 2
-
 # look at variable names
 colnames(wave1)
 colnames(wave2)
