@@ -167,8 +167,8 @@ t_gen_out <- t_generalize(wave1, wave2, colnames1, colnames2)
 library(xtable)
 xtable(t_gen_out)
 
-sum_func_out_w1 <- sum_func(wave1)
-sum_func_out_w2 <- sum_func(wave1)
+# sum_func -- Descriptives #
+sum_func_out_w2 <- sum_func(wave2)
 
 # can't do much else without the respondent variable names or treatment/control info
 
