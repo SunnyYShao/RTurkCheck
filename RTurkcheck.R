@@ -148,7 +148,6 @@ aov_treat_compare <- function (dat, var_names, treat_var){
   return (aov_mat)
 }
 
-<<<<<<< HEAD
 ############################################################
 # getGeoDetails -- extracting latitude/longitude geocodes  #
 ############################################################
