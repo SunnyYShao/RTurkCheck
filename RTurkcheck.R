@@ -137,7 +137,7 @@ aov_treat_compare <- function (dat, var_names, treat_var){
   
   # Conduct ANOVA test and put into matrix for table output #
   aov_mat <- matrix(NA, nrow=length(var_names), ncol=2)
-  for (i in 1:length(aov_vec)){
+  for (i in 1:length(var_names)){
     aov_mat[i,] <- unlist ( summary ( aov(formula ( 
     paste (var_names[i], "~ as.factor(", treat_var, ")", sep="" )), data = dat )))[c(7,9)]
   }
