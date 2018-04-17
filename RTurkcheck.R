@@ -189,30 +189,3 @@ getGeoDetails <- function(address, source_type="google"){
   
   return(answer)
 }
-=======
-
-### Sarah's Snowy Saturday Night ###
-
-# read in datasets
-wave1 <- read.csv("w1.csv", header = TRUE)
-wave2 <- read.csv("w2.csv", header = TRUE)
-
-# look at variable names
-colnames(wave1)
-colnames(wave2)
-
-# pull variables to compare
-colnames1 <- colnames2 <- c("religion_r", "dem", "income_r")
-
-# run t-tests on these three variables
-t_gen_out <- t_generalize(wave1, wave2, colnames1, colnames2)
-library(xtable)
-xtable(t_gen_out)
-
-# sum_func -- Descriptives #
-sum_func_out_w2 <- sum_func(wave2)
-
-# can't do much else without the respondent variable names or treatment/control info
-
-
->>>>>>> 75a3d616e5c2bd9b435f25115e59a7bce085903e
